@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELYAS | ElyasExe — Official Site</title>
+<meta name="description" content="Official home of ELYAS (ElyasExe) — FPS action, high-stakes casino nights, and a community built on hype. Watch live, check the leaderboard, and say hello.">
+<meta name="theme-color" content="#0b0b0f">
+<meta property="og:title" content="ELYAS | ElyasExe">
+<meta property="og:description" content="FPS action, high-stakes casino nights, and a community built on hype. Watch live and join in.">
+<meta property="og:type" content="website">
+
+<!-- Runs immediately (before first paint) so the .reveal scroll-in-animations
+     have a CSS hook to key off; if JS is disabled, .reveal content just stays visible. -->
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<!-- Google Fonts: Oswald (display/headings) + Inter (body/UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="#home" class="nav-logo">Elyas</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="leaderboards.html">Leaderboards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-status" id="navStatus" onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" aria-label="Jump to live status">
+      <span class="status-dot" id="statusDotNav"></span>
+      <span id="statusTextNav">Offline</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="leaderboards.html">Leaderboards</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<header id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-text-col reveal">
+      <p class="eyebrow">Welcome to the stream</p>
+      <h1 class="hero-title">Hey, I'm <span class="accent">ELYAS</span>!</h1>
+      <p class="hero-text">Thanks for stopping by. This is where we stream, connect, and enjoy every moment together. Grab a seat, join the community, and let's make every stream unforgettable.</p>
+      <div class="btn-row">
+        <a href="https://stake.bz/?c=BetWise&offer=betwise" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Claim Bonus</a>
+        <a href="https://kick.com/elyasexe" class="btn btn-red" target="_blank" rel="noopener noreferrer">Watch Live</a>
+      </div>
+    </div>
+    <div class="hero-live-col reveal">
+      <div class="live-card bracket">
+        <div class="live-card-header">
+          <span>Live Status</span>
+          <span class="status-pill"><span class="status-dot" id="statusDot"></span><span id="statusText">Offline</span></span>
+        </div>
+        <div class="live-frame">
+          <iframe src="https://player.kick.com/elyasexe?muted=true" title="ELYAS Kick Livestream" height="720" width="1280" frameborder="0" scrolling="no" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="seam"></div>
+
+<section id="about" class="about">
+  <div class="section-inner about-inner">
+    <div class="reveal">
+      <p class="eyebrow">Get to know me</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-bio">Full-time streamer. ELYAS brings high-energy FPS gameplay and big-stakes casino nights to the table every single week, with a community that shows up for the wins, the losses, and everything in between. What started as a passion for gaming turned into a home for anyone. climb the leaderboards, unlock exclusive community perks, and become part of a growing squad where everyone has a chance to shine. Let's play, compete, and win together.</p>
+    </div>
+    <div class="about-visual reveal">
+      <div class="portrait-frame bracket">
+        <img src="assets/images/portrait.webp" alt="Portrait of ELYAS">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboards" class="leaderboards">
+  <div class="leader-watermark" aria-hidden="true">&spades;</div>
+  <div class="section-inner">
+    <p class="eyebrow center">Top of the community</p>
+    <h2 class="section-title center">Leaderboards</h2>
+    <div class="podium">
+      <div class="podium-card rank-2 reveal">
+        <div class="rank-badge">2</div>
+        <div class="podium-name">Yotot10</div>
+        <div class="podium-score">$19,235</div>
+      </div>
+      <div class="podium-card rank-1 reveal">
+        <div class="rank-badge">1</div>
+        <div class="podium-name">DiBlameKazz22</div>
+        <div class="podium-score">$19,661</div>
+      </div>
+      <div class="podium-card rank-3 reveal">
+        <div class="rank-badge">3</div>
+        <div class="podium-name">geotap</div>
+        <div class="podium-score">$3,010</div>
+      </div>
+    </div>
+    <div class="leader-list reveal">
+      <div class="leader-row"><span class="rank">4</span><span class="name">skyflakesss22</span><span class="score">$2,587</span></div>
+      <div class="leader-row"><span class="rank">5</span><span class="name">acenitro</span><span class="score">$1,604</span></div>
+    </div>
+    <div class="center-btn-wrap reveal">
+      <a href="leaderboards.html" class="btn btn-outline">View Full Rankings</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-inner contact-inner">
+    <div class="reveal">
+      <p class="eyebrow">Say hello</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-text">Business inquiries, collabs, or just want to say what's up? Drop a line and I'll get back to you.</p>
+      <a href="mailto:hello@example.com" class="email-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        elyasssgg@gmail.com
+      </a>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Social media</p>
+      <div class="social-links">
+        <a href="https://kick.com/elyasexe" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h4v7.2L13.5 3H18l-6.2 8.5L18.5 21H14l-6-8.2V21H4z"/></svg>
+          Kick
+        </a>
+        <a href="https://www.facebook.com/elyasgg" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l.4-3H14V8.7c0-.87.24-1.46 1.48-1.46H17V4.14C16.73 4.1 15.8 4 14.71 4 12.44 4 10.9 5.37 10.9 7.9v2.6H8.4v3H10.9V21h3.1z"/></svg>
+          Facebook
+        </a>
+        <a href="https://gosh.com/16322436" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18"/></svg>
+          Gosh
+        </a>
+        <a href="https://discord.gg/8Pu9Pu7DU" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/></svg>
+          Discord
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 ELYAS. All rights reserved.</p>
+  <p class="disclaimer">Must be 18+. Please gamble responsibly.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>

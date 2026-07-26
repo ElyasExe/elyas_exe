@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboards | ELYAS</title>
+<meta name="description" content="ELYAS community leaderboard — the top 10 wagerers ranked by total wagered, first-time deposits, total deposits, and conversion rate.">
+<meta name="theme-color" content="#0b0b0f">
+
+<!-- Runs immediately (before first paint) so the .reveal scroll-in-animations
+     have a CSS hook to key off; if JS is disabled, .reveal content just stays visible. -->
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<!-- Google Fonts: Oswald (display/headings) + Inter (body/UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html#home" class="nav-logo">Elyas</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="leaderboards.html" class="active">Leaderboards</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-status" id="navStatus" onclick="window.location.href='index.html#home'" aria-label="Jump to live status on the home page">
+      <span class="status-dot" id="statusDotNav"></span>
+      <span id="statusTextNav">Offline</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="leaderboards.html" class="active">Leaderboards</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<header class="lb-header">
+  <div class="lb-header-grid"></div>
+  <div class="lb-header-glow"></div>
+  <div class="section-inner lb-header-inner">
+    <p class="eyebrow center">Top of the community</p>
+    <h1 class="section-title center">Leaderboards</h1>
+    <p class="lb-subtitle reveal">The top 10 wagerers ranked live. Switch currency, check where you land, and jump in — the board resets every season.</p>
+
+    <div class="lb-controls reveal">
+      <div class="currency-toggle" role="group" aria-label="Currency">
+        <button class="currency-btn active" data-currency="USD" aria-pressed="true">USD</button>
+        <button class="currency-btn" data-currency="PHP" aria-pressed="false">PHP</button>
+      </div>
+      <a href="https://stake.bz/?c=BetWise&offer=betwise" class="btn btn-gold" target="_blank">Join Now</a>
+    </div>
+
+    <div class="summary-stats reveal">
+      <div class="summary-card">
+        <span class="summary-value amount" data-usd="49506">$49,506</span>
+        <span class="summary-label">Overall Wager</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-value amount">155</span>
+        <span class="summary-label">First Time Deposit (FTD)</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-value amount" >355</span>
+        <span class="summary-label">Total Deposits</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="seam"></div>
+
+<section class="lb-table-section">
+  <div class="section-inner">
+    <div class="rank-table" role="table" aria-label="Top 10 wager leaderboard">
+
+      <div class="rank-row rank-head" role="row">
+        <div class="rank-identity" role="columnheader">Player</div>
+        <div class="stat-col stat-wagered" role="columnheader">Total Wagered</div>
+      </div>
+
+      <div class="rank-row top-1 reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal gold">1</span>
+          <span class="player-name">DiBlameKazz22</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="19661.47">$19,661</span></div>
+      </div>
+
+      <div class="rank-row top-2 reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal silver">2</span>
+          <span class="player-name">Yotot10</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="19235.52">$19,235</span></div>
+      </div>
+
+      <div class="rank-row top-3 reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal bronze">3</span>
+          <span class="player-name">geotap</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="3010.66">$3,010</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">4</span>
+          <span class="player-name">skyflakesss22</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="2587.87">$2,587</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">5</span>
+          <span class="player-name">acenitro</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="1604.28">$1,604</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">6</span>
+          <span class="player-name">kyyer</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="1355.71">$1,355</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">7</span>
+          <span class="player-name">zeusmedusaaa</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="980">$980</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">8</span>
+          <span class="player-name">ayaka231</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="575.43">$575</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">9</span>
+          <span class="player-name">PjVamps</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="346.33">$346</span></div>
+      </div>
+
+      <div class="rank-row reveal" role="row">
+        <div class="rank-identity" role="cell">
+          <span class="rank-medal">10</span>
+          <span class="player-name">eunluzun</span>
+        </div>
+        <div class="stat-col stat-wagered" role="cell"><span class="cell-label">Wagered</span><span class="amount" data-usd="153">$153</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 ELYAS. All rights reserved.</p>
+  <p class="disclaimer">Must be 18+. Please gamble responsibly.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>
